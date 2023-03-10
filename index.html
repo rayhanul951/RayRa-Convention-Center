@@ -12,11 +12,29 @@
         .photo img{
             width: 100%;
         }
+        #about-section{
+            position: relative;
+        }
+        #about-section .offer{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 240px;
+            margin-left: 0;
+            padding-right: 0;
+            border-left:7px solid #3585f4;
+            background-color: white;
+            border-radius: 0px;
+        }
+        #about-section .offer i{
+            color: #3585f4;
+        }
 
         /* this are styles for package section */
         .package{
             position: relative;
-            transition: position 5s;
+            /* transition: 5s; */
             /* background-color: aqua; */
         }
         .package:hover{
@@ -25,21 +43,28 @@
             top: -20px;
             box-shadow: 0px 30px 10px 0px rgba(110, 170, 248, 0.5);
         }
-        .hot-package:hover ~ .hot-package> .hot{
-            background-color: #3585f4;
+        .hot{
+            display: none;
+        }
+        .hot-package:hover .hot{
+            display: inline-block;
         }
         .package > .btn{
             background-color: #edecf5;
             color: #3585f4;
             font-weight: 600;
         }
-        .btn:hover{
+        .package:hover .btn {
             background-color: white;
+        }
+
+        .package p i{
             color: #3585f4;
         }
-        /* .package:hover ~ .package>.btn {
-            background-color: white;
-        } */
+
+        .package:hover i{
+            color: white;
+        }
 
         .package> span{
             background-color: red;
@@ -149,6 +174,17 @@
           </div>
     </section>
     <section id="about-section">
+        <div class="offer">
+            <div class="toast show align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    <i class="fa-solid fa-gift"></i>
+                    20% off on next booking
+                  </div>
+                  <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
         <div class="about d-grid container my-5">
             <div class="row">
                 <div class="photo col-lg-6 col-md-6 col-sm-12"><img src="/Images/Section-2.jpg"></div>
@@ -160,8 +196,6 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quos perspiciatis quas aliquid sit atque.
                     </p>
                     <a class="btn btn-primary" href="#" role="button">Explore our album<i class="fa-solid fa-arrow-right ms-1"></i></a>
-                    <div class="offer">
-                    </div>
                 </div>
             </div>
         </div>
@@ -196,7 +230,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                         Per day bill. 
                     </p>
-                    <a class="btn btn-secondary  rounded-pill w-100" href="#" role="button">Choose plan</a>
+                    <a class="btn rounded-pill w-100" href="#" role="button">Choose plan</a>
                 </div>
                 <div class="package rounded-5 px-4 py-5 col-lg-3 col-md-6 col-sm-">
                     <h3>$500</h3>
@@ -224,7 +258,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                         Billed as shift. 
                     </p>
-                    <a class="btn btn-secondary rounded-pill w-100" href="#" role="button">Choose plan</a>
+                    <a class="btn rounded-pill w-100" href="#" role="button">Choose plan</a>
                 </div>
                 <div class="package hot-package rounded-5 px-4 py-5 col-lg-3 col-md-6 col-sm-">
                     <span class="badge rounded-pill hot">Hot</span>
@@ -253,7 +287,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                         Pay as plan. 
                     </p>
-                    <a class="btn btn-secondary rounded-pill w-100" href="#" role="button">Choose plan</a>
+                    <a class="btn rounded-pill w-100" href="#" role="button">Choose plan</a>
                 </div>
                 <div class="package rounded-5 px-4 py-5 col-lg-3 col-md-6 col-sm-">
                     <h3>$1200</h3>
@@ -281,7 +315,7 @@
                         <i class="fa-solid fa-circle-check"></i>
                         Pay as plan. 
                     </p>
-                    <a class="btn btn-secondary rounded-pill w-100" href="#" role="button">Choose plan</a>
+                    <a class="btn rounded-pill w-100" href="#" role="button">Choose plan</a>
                 </div>
             </div>
         </div>
